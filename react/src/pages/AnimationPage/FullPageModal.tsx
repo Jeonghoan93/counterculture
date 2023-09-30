@@ -40,8 +40,8 @@ const FullPageModal: React.FC = () => {
   return (
     <div
       ref={modalRef}
-      className="fixed top-0 left-0 w-full h-full z-50 transition-opacity duration-1000"
-      style={{ opacity: 1 }}
+      className="fixed top-0 left-0 w-full h-full transition-opacity duration-1000"
+      style={{ opacity: 1, zIndex: 9999 }}
     >
       <div
         style={{
