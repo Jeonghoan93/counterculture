@@ -68,6 +68,9 @@ const Modal: React.FC<ModalProps> = ({
   return (
     <>
       <div
+        style={{
+          zIndex: 9999,
+        }}
         className="
           justify-center 
           items-center 
@@ -76,7 +79,7 @@ const Modal: React.FC<ModalProps> = ({
           overflow-y-auto 
           fixed 
           inset-0 
-          z-50 
+
           outline-none 
           focus:outline-none
           bg-neutral-800/70
