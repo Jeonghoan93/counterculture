@@ -1,4 +1,4 @@
-import { BsRocketTakeoff } from "react-icons/bs";
+import { GiLovers } from "react-icons/gi";
 import Container from "src/components/Container";
 import LargeImgCard from "src/components/LargeImgCard";
 import LeftSide from "./Sections/LeftSide";
@@ -17,13 +17,13 @@ const Party = () => {
         "
       >
         <section className="flex flex-col gap-4">
-          <LargeImgCard dark={true} img={"/images/businessPlan.jpeg"}>
+          <LargeImgCard dark={true} img={"/images/partyx.jpg"}>
             <div className="text-white flex flex-row items-center gap-3 font-bold text-[14pt]">
               <span>
-                <BsRocketTakeoff />
+                <GiLovers />
               </span>
 
-              <span>Be one of the first</span>
+              <span>We help people to gather</span>
             </div>
           </LargeImgCard>
 
