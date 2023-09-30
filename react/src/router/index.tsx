@@ -2,9 +2,9 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import RootLayout from "src/layouts/RootLayout";
 import EnterprisePage from "src/pages/Company";
 import Careers from "src/pages/Company/Pages/Careers";
-import Enterprise from "src/pages/Enterprise";
 import { default as BusinessPlan, default as Home } from "src/pages/Home";
 import MyEvents from "src/pages/Host/MyEvents";
+import Mission from "src/pages/Mission";
 import Partner from "src/pages/Partner";
 import Account from "src/pages/User/Account";
 import LoginSecurity from "src/pages/User/Account/Pages/LoginSecurity";
@@ -24,7 +24,7 @@ const AppRoutes = () => {
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
           {/* Enterprise */}
-          <Route path="enterprise" element={<Enterprise />} />
+          <Route path="mission" element={<Mission />} />
 
           {/* Company */}
           <Route path="careers" element={<Careers />} />

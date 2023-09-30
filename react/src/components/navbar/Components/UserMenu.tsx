@@ -157,8 +157,8 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                 "
                 >
                   <MenuItem
-                    label="Enterprise"
-                    onClick={() => navigate("/enterprise")}
+                    label="Company"
+                    onClick={() => navigate("/company")}
                   />
                   <MenuItem
                     label="Profile"
@@ -190,7 +190,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                 >
                   <MenuItem
                     label="Mission"
-                    onClick={() => navigate("/enterprise")}
+                    onClick={() => navigate("/mission")}
                   />
                 </div>
                 <div
@@ -201,7 +201,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                 >
                   <MenuItem
                     label="Company"
-                    onClick={() => navigate("/enterprise")}
+                    onClick={() => navigate("/company")}
                   />
                 </div>
               </>

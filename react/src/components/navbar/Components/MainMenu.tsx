@@ -37,7 +37,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ currentUser }) => {
     <div className="relative ml-6 hidden md:block">
       <div className="flex flex-row items-center gap-3">
         <div
-          onClick={() => navigate("/enterprise")}
+          onClick={() => navigate("/mission")}
           className="
             py-1 
             px-2 
@@ -52,7 +52,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ currentUser }) => {
           </span>
         </div>
         <div
-          onClick={() => navigate("/enterprise")}
+          onClick={() => navigate("/mission")}
           className="
             py-1 
             px-2 

@@ -17,20 +17,64 @@ const Enterprise = () => {
             maxWidth: "500px",
           }}
         >
-          Why Choose NewReligionX?
+          We are not supposed to be
         </span>
         <div className="flex flex-row justify-between gap-12">
-          <span
-            className="text-[13pt] lg:text-[15pt] font-normal"
+          <div
+            className="flex flex-col gap-3 p-1 text-[14pt] lg:text-[15pt] font-normal"
             style={{
               maxWidth: "600px",
             }}
           >
-            For enterprises like festival organizers, club owners, and large
-            event hosts, NewReligionX offers a unique gamified discovery
-            process, monetary incentives for users, and a robust platform
-            ensuring safety and trustworthiness.
-          </span>
+            <span>
+              In a world that values the ordinary, the predictable, the status
+              quo - we dare to dance on the edges of what is known. We are the
+              echo of the untold stories, the visions that dwell in the shadows,
+              the ideas that defy the ordinary. At NewReligionX, we challenge
+              the gravitational pull of convention, we are the architects of the
+              unseen, the unheard.
+            </span>
+
+            <span>
+              With{" "}
+              <span
+                onClick={() => window.open("https://www.partyx.fr")}
+                className="font-semibold underline"
+              >
+                PartyX
+              </span>
+              , we reimagine celebrations, elevating everyday moments into
+              legendary memories. Through{" "}
+              <span
+                onClick={() =>
+                  window.open("https://d1k7b9a76xe97y.cloudfront.net/")
+                }
+                className="font-semibold underline"
+              >
+                IdeaToRealX
+              </span>
+              , we bridge the gap between dreamers and doers, making ideas
+              tangible, and giving life to the latent potential in every
+              connection. And with{" "}
+              <span className="font-semibold underline">CommunityX</span>, we
+              transform spaces into stories, every corner, every wall, narrating
+              tales of wanderlust and welcome.
+            </span>
+
+            <span>
+              We exist because of those who dare to dream differently. Those who
+              feel the irresistible tug of the 'what ifs' and 'whys'. Those who,
+              like us, believe that we are not just shaped by the world, but
+              have the power to shape it back.
+            </span>
+
+            <span>
+              This is not just a mission; it's a call to arms. To every rebel,
+              every innovator, every fearless dreamer - we see you. Join us, and
+              let's co-write a story that the world never thought it needed, but
+              won't ever forget.
+            </span>
+          </div>
           <button
             onClick={() => alert("zldwkd93.business@gmail.com")}
             style={{ maxWidth: "300px", height: "fit-content" }}
