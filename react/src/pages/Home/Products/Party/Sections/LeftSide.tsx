@@ -4,6 +4,7 @@ import InfoCard from "src/components/TextBox/InfoCard";
 import InfoTextBox from "src/components/TextBox/InfoTextBox";
 import useCountries from "src/hooks/useCountries";
 import FundingPlan from "../Components/FundingPlan";
+import ProductCard from "../Components/ProductCard";
 import {
   EarningMechanism,
   ExpansionIdeas,
@@ -26,6 +27,7 @@ const LeftSide: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-3 col-span-4 mb-3">
+      <ProductCard />
       <FundingPlan />
 
       <div className="p-5 bg-gray-50 rounded-xl border-[1px] border-neutral-200">

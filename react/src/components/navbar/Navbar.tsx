@@ -12,7 +12,12 @@ const Navbar: React.FC = () => {
   const currentUser = useCurrentUser();
 
   return (
-    <div className="fixed w-full bg-black z-10 shadow-sm">
+    <div
+      style={{
+        zIndex: 999,
+      }}
+      className="fixed w-full bg-black shadow-sm"
+    >
       <div
         className="
           py-4 
