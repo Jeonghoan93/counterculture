@@ -71,13 +71,9 @@ const FullPageModal: React.FC = () => {
             <span className="x">X</span>
           </div>
 
-          <h2 className="text-white font-bold text-2xl mb-2 font-mono">
-            The most destructive
+          <h2 className="text-gray-300 font-bold text-[12pt] mb-2 font-mono">
+            The most destructive plan
           </h2>
-
-          <div>
-            <span>Light the fire in the heart of crowd.</span>
-          </div>
         </div>
         <button
           onClick={() => hideModalSmoothly()}

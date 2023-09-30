@@ -28,7 +28,7 @@
 
 .party,
 .x {
-  font-size: 3rem;
+  font-size: 2rem;
   animation: arrive 2s forwards, pulse 1s 3.5s infinite;
 }
 
