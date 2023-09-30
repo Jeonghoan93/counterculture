@@ -31,7 +31,6 @@ const FooterNavigation: FC = () => {
 
   const companyMenu: Array<Navigation> = [
     { label: "Mission", path: () => navigate("/mission") },
-    { label: "Business Plan", path: () => navigate("/business-plan") },
     {
       label: "Careers",
       path: () => navigate("/careers"),
