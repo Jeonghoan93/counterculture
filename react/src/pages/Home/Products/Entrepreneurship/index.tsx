@@ -25,7 +25,7 @@ const Entrepreneurship = () => {
                 <PiRocketLaunchLight />
               </span>
 
-              <span>We help people make their first product</span>
+              <span>We help build your first product</span>
             </div>
           </LargeImgCard>
 
