@@ -34,7 +34,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ currentUser }) => {
   };
 
   return (
-    <div className="relative ml-6">
+    <div className="relative ml-6 hidden md:block">
       <div className="flex flex-row items-center gap-3">
         <div
           onClick={() => navigate("/enterprise")}
