@@ -1,0 +1,81 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v2
+        with:
+          path: react/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Debug - List Root Directory Content
+        run: ls -la ${{ github.workspace }}/react/
+
+      - name: Install and Build
+        run: |
+          cd ${{ github.workspace }}/react
+          yarn install 
+          yarn build
+
+      - name: List build directory content
+        run: ls -la ${{ github.workspace }}/react/dist/
+
+      - name: Archieve production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: ${{ github.workspace }}/react/dist/
+
+  deploy:
+    needs: build
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Download production artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: ${{ github.workspace }}/downloaded_artifacts
+
+      - name: List contents of downloaded artifacts
+        run: ls -la ${{ github.workspace }}/downloaded_artifacts/
+
+      - name: Configure AWS CLI
+        run: aws configure set region eu-north-1
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Deploy to S3 using AWS CLI
+        run: |
+          aws s3 sync ${{ github.workspace }}/downloaded_artifacts/ s3://counterculture/ --acl bucket-owner-full-control
+        env:
+          AWS_S3_BUCKET: "counterculture"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: "eu-north-1"
+
+      - name: Invalidate CloudFront Distribution
+        run: |
+          aws cloudfront create-invalidation --distribution-id EHQSC7IHSL5C4 --paths "/*"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: "eu-north-1"
