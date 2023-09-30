@@ -1,9 +1,14 @@
 import { useLocation } from "react-router-dom";
 import MenuBox from "src/components/MenuBox";
 
+interface Menu {
+  label: string;
+  icon?: React.ReactNode;
+}
+
 interface MenusProps {
   page: string;
-  menus: string[];
+  menus: Menu[];
 }
 
 const Menus: React.FC<MenusProps> = ({ page, menus }) => {
@@ -22,6 +27,7 @@ const Menus: React.FC<MenusProps> = ({ page, menus }) => {
   return (
     <div
       className="
+      bg-white
         max-w-[2520px]
         mx-auto
         xl:px-16
@@ -36,15 +42,16 @@ const Menus: React.FC<MenusProps> = ({ page, menus }) => {
           flex-row 
           items-center 
           overflow-x-auto
-          gap-4
+          gap-10
         "
       >
         {menus.map((item) => (
           <MenuBox
+            icon={item.icon}
             page={page}
-            key={item}
-            label={item}
-            selected={menu === item}
+            key={item.label}
+            label={item.label}
+            selected={menu === item.label}
           />
         ))}
       </div>

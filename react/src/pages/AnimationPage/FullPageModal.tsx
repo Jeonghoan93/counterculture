@@ -72,7 +72,7 @@ const FullPageModal: React.FC = () => {
           </div>
 
           <h2 className="text-white font-bold text-2xl mb-2 font-mono">
-            New religion
+            The most destructive
           </h2>
 
           <div>

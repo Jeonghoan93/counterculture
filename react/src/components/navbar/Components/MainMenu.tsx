@@ -48,7 +48,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ currentUser }) => {
           "
         >
           <span className="text-white text-[10pt] font-bold underline">
-            Products
+            Investor relations
           </span>
         </div>
         <div

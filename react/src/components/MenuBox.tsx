@@ -6,13 +6,14 @@ interface MenuBoxProps {
   page: string;
   label: string;
   selected?: boolean;
+  icon?: React.ReactNode;
 }
 
 type QueryParams = Record<string, string | undefined> & {
   menu?: string;
 };
 
-const MenuBox: React.FC<MenuBoxProps> = ({ label, selected, page }) => {
+const MenuBox: React.FC<MenuBoxProps> = ({ label, selected, page, icon }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -63,6 +64,7 @@ const MenuBox: React.FC<MenuBoxProps> = ({ label, selected, page }) => {
         ${selected ? "text-neutral-800" : "text-neutral-500"}
       `}
     >
+      <div className="text-[15pt]">{icon}</div>
       <div className="font-semibold text-[10pt]">{label}</div>
     </div>
   );

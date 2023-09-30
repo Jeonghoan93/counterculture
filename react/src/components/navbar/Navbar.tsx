@@ -1,3 +1,6 @@
+import { BiParty } from "react-icons/bi";
+import { GiTeamIdea } from "react-icons/gi";
+import { RiCommunityLine } from "react-icons/ri";
 import { useCurrentUser } from "src/hooks/useCurrentUser";
 import Container from "../Container";
 import Logo from "./Components/Logo";
@@ -39,10 +42,21 @@ const Navbar: React.FC = () => {
           </div>
         </Container>
       </div>
-      <Menus page={"/company"} menus={["Mission", "Arts", "Next Unicorn"]} />
+      <Menus
+        page={"/"}
+        menus={[
+          { label: "Party", icon: <BiParty /> },
+          { label: "Entrepreneurship", icon: <GiTeamIdea /> },
+          { label: "Community", icon: <RiCommunityLine /> },
+        ]}
+      />
       <Menus
         page={"/partner"}
-        menus={["Club Owner", "Festival Organizer", "Rave Organizer"]}
+        menus={[
+          { label: "Club Owner" },
+          { label: "Festival Organizer" },
+          { label: "Rave Organizer" },
+        ]}
       />
     </div>
   );

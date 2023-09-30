@@ -1,20 +1,22 @@
 import { BsRocketTakeoff } from "react-icons/bs";
 import Container from "src/components/Container";
 import LargeImgCard from "src/components/LargeImgCard";
-import LeftSide from "src/pages/BusinessPlan/Sections/LeftSide";
-import RightSide from "src/pages/BusinessPlan/Sections/RightSide";
+import LeftSide from "./Sections/LeftSide";
+import RightSide from "./Sections/RightSide";
 
-const BusinessPlan: React.FC = () => {
+const Party = () => {
   return (
     <Container>
       <div
+        style={{
+          marginTop: "70px",
+        }}
         className="
-          mt-[-22pt]
           max-w-screen-xl 
           mx-auto
         "
       >
-        <div className="flex flex-col gap-4">
+        <section className="flex flex-col gap-4">
           <LargeImgCard dark={true} img={"/images/businessPlan.jpeg"}>
             <div className="text-white flex flex-row items-center gap-3 font-bold text-[14pt]">
               <span>
@@ -43,10 +45,10 @@ const BusinessPlan: React.FC = () => {
               <RightSide />
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </Container>
   );
 };
 
-export default BusinessPlan;
+export default Party;
