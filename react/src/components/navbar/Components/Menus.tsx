@@ -20,6 +20,8 @@ const Menus: React.FC<MenusProps> = ({ page, menus }) => {
   const pathname = location.pathname;
   const isPage = pathname === page;
 
+  const defaultSelectedMenu = pathname === "/" ? "Party" : null;
+
   if (!isPage) {
     return null;
   }
@@ -51,7 +53,9 @@ const Menus: React.FC<MenusProps> = ({ page, menus }) => {
             page={page}
             key={item.label}
             label={item.label}
-            selected={menu === item.label}
+            selected={
+              menu ? menu === item.label : item.label === defaultSelectedMenu
+            }
           />
         ))}
       </div>
