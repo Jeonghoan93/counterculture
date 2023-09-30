@@ -4,7 +4,6 @@ import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import Heading from "src/components/Heading";
-import CategoryInput from "src/components/inputs/CategoryInput";
 import Counter from "src/components/inputs/Counter";
 import DateTimePicker from "src/components/inputs/DateTimePicker";
 import ImageUpload from "src/components/inputs/ImageUpload";
@@ -12,7 +11,6 @@ import Input from "src/components/inputs/Input";
 import useRentModal from "src/hooks/useRentModal";
 import { createEvent } from "src/services/event";
 import { CreateEventDTO } from "src/services/event/dto";
-import { categories } from "src/utils/constants";
 import Modal from "./Modal";
 
 enum STEPS {
@@ -60,7 +58,6 @@ const RentModal = () => {
   });
 
   const location = watch("location");
-  const category = watch("category");
   const maxGuests = watch("maxGuests");
   const minGuests = watch("minGuests");
   const imageSrc = watch("imageSrc");
@@ -138,18 +135,7 @@ const RentModal = () => {
           max-h-[50vh]
           overflow-y-auto
         "
-      >
-        {categories.map((item) => (
-          <div key={item.label} className="col-span-1">
-            <CategoryInput
-              onClick={(category) => setCustomValue("category", category)}
-              selected={category === item.label}
-              label={item.label}
-              icon={item.icon}
-            />
-          </div>
-        ))}
-      </div>
+      ></div>
     </div>
   );
 

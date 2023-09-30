@@ -9,7 +9,6 @@ import Heading from "../Heading";
 
 import Counter from "../inputs/Counter";
 
-import DateRangePicker from "../inputs/DateRangePicker";
 import Modal from "./Modal";
 
 enum STEPS {
@@ -128,10 +127,6 @@ const SearchModal = () => {
         <Heading
           title="When do you plan to go?"
           subtitle="Make sure everyone is free!"
-        />
-        <DateRangePicker
-          onChange={(value) => setDateRange(value.selection)}
-          value={dateRange}
         />
       </div>
     );
