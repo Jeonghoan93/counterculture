@@ -21,18 +21,14 @@ const Enterprise = () => {
         </span>
         <div className="flex flex-row justify-between gap-12">
           <div
-            className="flex flex-col gap-3 p-1 text-[14pt] lg:text-[15pt] font-normal"
+            className="flex flex-col text-gray-800 gap-3 p-1 text-[14pt] lg:text-[15pt] font-normal"
             style={{
               maxWidth: "600px",
             }}
           >
             <span>
               In a world that values the ordinary, the predictable, the status
-              quo - we dare to dance on the edges of what is known. We are the
-              echo of the untold stories, the visions that dwell in the shadows,
-              the ideas that defy the ordinary. At NewReligionX, we challenge
-              the gravitational pull of convention, we are the architects of the
-              unseen, the unheard.
+              quo - we dare to dance on the edges of what is known.
             </span>
 
             <span>
@@ -69,10 +65,7 @@ const Enterprise = () => {
             </span>
 
             <span>
-              This is not just a mission; it's a call to arms. To every rebel,
-              every innovator, every fearless dreamer - we see you. Join us, and
-              let's co-write a story that the world never thought it needed, but
-              won't ever forget.
+              To every rebel, every innovator, every fearless dreamer.
             </span>
           </div>
           <button
