@@ -1,7 +1,5 @@
-import { formatISO } from "date-fns";
 import qs from "query-string";
 import { useCallback, useMemo, useState } from "react";
-import { Range } from "react-date-range";
 import { useLocation, useNavigate } from "react-router-dom";
 import useSearchModal from "src/hooks/useSearchModal";
 
@@ -29,12 +27,6 @@ const SearchModal = () => {
   // const [city, setCity] = useState<CitySelectValue>();
 
   const [guestCount, setGuestCount] = useState(1);
-
-  const [dateRange, setDateRange] = useState<Range>({
-    startDate: new Date(),
-    endDate: new Date(),
-    key: "selection",
-  });
 
   // const Map = lazy(() => import("../Map"));
 
@@ -66,14 +58,6 @@ const SearchModal = () => {
       guestCount,
     };
 
-    if (dateRange.startDate) {
-      updatedQuery.startDate = formatISO(dateRange.startDate);
-    }
-
-    if (dateRange.endDate) {
-      updatedQuery.endDate = formatISO(dateRange.endDate);
-    }
-
     const url = qs.stringifyUrl(
       {
         url: "/events",
@@ -85,15 +69,7 @@ const SearchModal = () => {
     setStep(STEPS.LOCATION);
     searchModal.onClose();
     navigate(url);
-  }, [
-    step,
-    searchModal,
-    navigate,
-    guestCount,
-    dateRange,
-    onNext,
-    locationUse.search,
-  ]);
+  }, [step, searchModal, navigate, guestCount, onNext, locationUse.search]);
 
   const actionLabel = useMemo(() => {
     if (step === STEPS.INFO) {
