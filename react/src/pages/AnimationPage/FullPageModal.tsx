@@ -72,7 +72,7 @@ const FullPageModal: React.FC = () => {
           </div>
 
           <h2 className="text-gray-300 font-bold text-[12pt] mb-2 font-mono">
-            The most destructive plan
+            The Impossible plan
           </h2>
         </div>
         <button
