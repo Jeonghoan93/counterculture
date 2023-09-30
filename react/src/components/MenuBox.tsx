@@ -53,9 +53,9 @@ const MenuBox: React.FC<MenuBoxProps> = ({ label, selected, page, icon }) => {
         flex-col 
         items-center 
         justify-center 
-        gap-2
+        gap-1
         pt-3
-        pb-2
+        pb-1
         border-b-2
         hover:text-neutral-900
         transition
@@ -64,8 +64,8 @@ const MenuBox: React.FC<MenuBoxProps> = ({ label, selected, page, icon }) => {
         ${selected ? "text-neutral-800" : "text-neutral-500"}
       `}
     >
-      <div className="text-[15pt]">{icon}</div>
-      <div className="font-semibold text-[10pt]">{label}</div>
+      <span className="text-[15pt]">{icon}</span>
+      <span className="font-semibold text-[10pt]">{label}</span>
     </div>
   );
 };

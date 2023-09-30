@@ -33,9 +33,9 @@ const Menus: React.FC<MenusProps> = ({ page, menus }) => {
         max-w-[2520px]
         mx-auto
         xl:px-16
-        md:px-7
+        md:px-10
         sm:px-2
-        px-5
+        px-4
       "
     >
       <div
@@ -44,7 +44,7 @@ const Menus: React.FC<MenusProps> = ({ page, menus }) => {
           flex-row 
           items-center 
           overflow-x-auto
-          gap-10
+          gap-7
         "
       >
         {menus.map((item) => (
