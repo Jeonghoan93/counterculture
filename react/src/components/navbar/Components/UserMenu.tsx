@@ -49,8 +49,25 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
         <div
-          onClick={toggleOpen}
+          onClick={() => navigate("/enterprise")}
           className="
+            py-1 
+            px-2 
+            rounded-full 
+            hover:bg-neutral-800 
+            transition 
+            cursor-pointer
+          "
+        >
+          <span className="text-white text-[10pt] font-bold underline">
+            Sign in
+          </span>
+        </div>
+
+        {currentUser && (
+          <div
+            onClick={toggleOpen}
+            className="
           p-4
           md:py-1
           md:px-2
@@ -66,12 +83,13 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           transition
           text-white
           "
-        >
-          <AiOutlineMenu />
-          <div className="hidden md:block">
-            <Avatar src={currentUser?.img} />
+          >
+            <AiOutlineMenu />
+            <div className="hidden md:block">
+              <Avatar src={currentUser?.img} />
+            </div>
           </div>
-        </div>
+        )}
       </div>
       {isOpen && (
         <div
