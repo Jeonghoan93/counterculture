@@ -11,7 +11,7 @@ const ProductCard = () => {
         <div className="mb-2">
           <h2 className="text-[13pt] font-bold">Product</h2>
           <div
-            onClick={() => window.open("https://www.partyx.fr")}
+            onClick={() => window.open("https://d1k7b9a76xe97y.cloudfront.net")}
             className="cursor-pointer my-2 flex flex-row gap-1 items-center"
           >
             <span className="text-[11pt] underline text-gray-600 font-semibold">
