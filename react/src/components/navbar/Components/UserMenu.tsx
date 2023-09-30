@@ -7,6 +7,7 @@ import useCreateProfileModal from "src/hooks/useCreateProfile";
 import useLoginModal from "src/hooks/useLoginModal";
 import useRegisterModal from "src/hooks/useRegisterModal";
 import useRentModal from "src/hooks/useRentModal";
+import { useWindowWidth } from "src/hooks/useWindowWidth";
 import useOnClickOutside from "src/hooks/userOnClickOutside";
 import { User } from "src/interfaces/user";
 import { logout } from "src/services/auth";
@@ -23,6 +24,9 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   const loginModal = useLoginModal();
   const registerModal = useRegisterModal();
   const rentModal = useRentModal();
+  const windowWidth = useWindowWidth();
+
+  const smallScreen = windowWidth < 475;
 
   const createProfileModal = useCreateProfileModal();
 
@@ -48,9 +52,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
-        <div
-          onClick={loginModal.onOpen}
-          className="
+        {!smallScreen && (
+          <div
+            onClick={loginModal.onOpen}
+            className="
             py-1 
             px-2 
             rounded-full 
@@ -58,17 +63,18 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
             transition 
             cursor-pointer
           "
-        >
-          <span className="text-white text-[10pt] font-bold underline">
-            Sign in
-          </span>
-        </div>
+          >
+            <span className="text-white text-[10pt] font-bold underline">
+              Sign in
+            </span>
+          </div>
+        )}
 
-        {currentUser && (
+        {smallScreen && (
           <div
             onClick={toggleOpen}
             className="
-          p-4
+          p-2
           md:py-1
           md:px-2
           border-[1px] 
@@ -175,6 +181,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
 
                 <MenuItem label="Sign up" onClick={registerModal.onOpen} />
 
+                <hr className="border-gray-500 block lg:hidden" />
                 <div
                   className="
                   block
@@ -182,19 +189,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                 "
                 >
                   <MenuItem
-                    label="List your party"
-                    onClick={currentUser ? rentModal.onOpen : loginModal.onOpen}
+                    label="Mission"
+                    onClick={() => navigate("/enterprise")}
                   />
                 </div>
-                <hr className="block lg:hidden" />
-                <div
-                  className="
-                  block
-                  md:hidden
-                "
-                >
-                  <MenuItem label="Home" onClick={() => navigate("/")} />
-                </div>
                 <div
                   className="
                   block
@@ -202,7 +200,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                 "
                 >
                   <MenuItem
-                    label="Enterprise"
+                    label="Company"
                     onClick={() => navigate("/enterprise")}
                   />
                 </div>
