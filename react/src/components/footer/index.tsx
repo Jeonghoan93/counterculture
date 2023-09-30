@@ -37,7 +37,7 @@ const Footer: FC = () => {
                 variant="h3"
                 sx={{ mb: 2 }}
               >
-                Religion
+                NewReligionX
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
                 Stockholm, Sweden

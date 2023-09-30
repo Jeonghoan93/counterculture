@@ -8,7 +8,7 @@ const Logo = () => {
       onClick={() => navigate("/")}
       className={"cursor-pointer text-white font-bold text-xl"}
     >
-      CounterCulture<span className={"text-red-600"}>X</span>
+      NewReligion<span className={"text-red-600"}>X</span>
     </div>
   );
 };

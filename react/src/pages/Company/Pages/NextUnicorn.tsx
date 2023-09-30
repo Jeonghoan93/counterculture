@@ -27,7 +27,7 @@ const mockedData = [
   },
   {
     title: "Revolutionizing Party Planning",
-    desc: "With our growing reputation, individuals now plan their own events with us. From a rooftop party in Barcelona to a canal-side gathering in Amsterdam, every event is special. We provide tools to make planning a breeze. PartyX becomes synonymous with memorable nights.",
+    desc: "With our growing reputation, individuals now plan their own events with us. From a rooftop party in Barcelona to a canal-side gathering in Amsterdam, every event is special. We provide tools to make planning a breeze. NewReligionX becomes synonymous with memorable nights.",
     user: {
       img: "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg",
       name: "Jimmy",

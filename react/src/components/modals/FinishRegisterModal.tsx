@@ -121,7 +121,7 @@ const FinishRegisterModal = () => {
       <span className="text-[9pt] text-gray-800">
         By selecting{" "}
         <span className="text-black font-semibold">Agree and continue</span>, I
-        agree to PartyX’s{" "}
+        agree to NewReligionX’s{" "}
         <span className="text-blue-900 font-semibold underline cursor-pointer">
           Terms of Service
         </span>
@@ -143,7 +143,7 @@ const FinishRegisterModal = () => {
       <div className="flex flex-start items-center">
         <Checkbox />
         <span className="text-[9pt] text-gray-800">
-          I don't want to receive marketing messages from PartyX.
+          I don't want to receive marketing messages from NewReligionX.
         </span>
       </div>
     </div>

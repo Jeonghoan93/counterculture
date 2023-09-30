@@ -27,7 +27,7 @@ const mockedData = [
   },
   {
     title: "The Beat Goes On",
-    desc: "Our rhythm resonates beyond festivals. Intimate gatherings, grand celebrations, and all that jazz in between, we make organizing a breeze. Every event feels like a headliner with PartyX.",
+    desc: "Our rhythm resonates beyond festivals. Intimate gatherings, grand celebrations, and all that jazz in between, we make organizing a breeze. Every event feels like a headliner with NewReligionX.",
     user: {
       img: "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg",
       name: "Jimmy",
@@ -36,7 +36,7 @@ const mockedData = [
   },
   {
     title: "Europe's Festive Pulse",
-    desc: "We're the rhythm, the vibe, the heart of Europe's festival scene. With PartyX, every festival turns legendary, every beat echoes across borders.",
+    desc: "We're the rhythm, the vibe, the heart of Europe's festival scene. With NewReligionX, every festival turns legendary, every beat echoes across borders.",
     user: {
       img: "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg",
       name: "Jimmy",

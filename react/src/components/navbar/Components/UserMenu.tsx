@@ -49,7 +49,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
         <div
-          onClick={() => navigate("/enterprise")}
+          onClick={loginModal.onOpen}
           className="
             py-1 
             px-2 

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import TextContainer from "src/components/TextBox/TextContainer";
 
 const mockedText1 = {
-  title: "why PartyX?",
+  title: "why NewReligionX?",
   desc: "It's about going to parties that matches your vibe, and the people that has similar interests as you. We believe that you can find your best friends in a party, and we want to make it easier for you to find them.",
   user: {
     img: "https://cdn.pixabay.com/photo/2017/08/30/12/45/girl-2696947_1280.jpg",

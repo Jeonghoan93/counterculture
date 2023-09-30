@@ -42,15 +42,15 @@ const HomeSection: React.FC = () => {
         <video
           ref={videoRef}
           className="absolute top-0 left-0 w-full h-full object-cover"
-          src="https://s3.eu-north-1.amazonaws.com/partyx.se/video2.mp4"
+          src="https://s3.eu-north-1.amazonaws.com/NewReligionX.se/video2.mp4"
           autoPlay
           muted
         ></video>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
           <h2 className="text-white text-2xl mb-2">GET INVITED</h2>
           <p className="text-white">
-            PartyX hosts any type of Party Events including House Party, Rave,
-            Festivals Nearby.
+            NewReligionX hosts any type of Party Events including House Party,
+            Rave, Festivals Nearby.
           </p>
         </div>
       </div>
