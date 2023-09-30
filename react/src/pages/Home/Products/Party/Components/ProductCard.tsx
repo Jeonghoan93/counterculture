@@ -5,6 +5,14 @@ import { FiExternalLink } from "react-icons/fi";
 const ProductCard = () => {
   const [activeSection, setActiveSection] = useState<string | null>("");
 
+  const toggleActiveSection = () => {
+    if (activeSection === "Seed Funding") {
+      setActiveSection(null);
+    } else {
+      setActiveSection("Seed Funding");
+    }
+  };
+
   return (
     <div className="p-5 bg-gray-50 rounded-xl border-[1px] border-neutral-200">
       <section>
@@ -15,7 +23,7 @@ const ProductCard = () => {
             className="cursor-pointer my-2 flex flex-row gap-1 items-center"
           >
             <span className="text-[11pt] underline text-gray-600 font-semibold">
-              See the product
+              partyx.fr
             </span>
             <span>
               <FiExternalLink />
@@ -24,13 +32,15 @@ const ProductCard = () => {
         </div>
 
         <div className="flex flex-col gap-3">
-          <span className="text-[11pt]">This product is ...</span>
+          <span className="text-[11pt]">
+            A platform to list and find customized party events.
+          </span>
 
           <span
-            onClick={() => setActiveSection("Seed Funding")}
+            onClick={toggleActiveSection}
             className="underline cursor-pointer text-blue-600"
           >
-            Read More
+            {activeSection === "Seed Funding" ? "Close" : "Read More"}
           </span>
         </div>
 

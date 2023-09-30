@@ -5,17 +5,25 @@ import { FiExternalLink } from "react-icons/fi";
 const ProductCard = () => {
   const [activeSection, setActiveSection] = useState<string | null>("");
 
+  const toggleActiveSection = () => {
+    if (activeSection === "Seed Funding") {
+      setActiveSection(null);
+    } else {
+      setActiveSection("Seed Funding");
+    }
+  };
+
   return (
     <div className="p-5 bg-gray-50 rounded-xl border-[1px] border-neutral-200">
       <section>
         <div className="mb-2">
           <h2 className="text-[13pt] font-bold">Product</h2>
           <div
-            onClick={() => window.open("https://www.partyx.fr")}
+            onClick={() => alert("Not implemented yet")}
             className="cursor-pointer my-2 flex flex-row gap-1 items-center"
           >
             <span className="text-[11pt] underline text-gray-600 font-semibold">
-              See the product
+              thecommunityx.com
             </span>
             <span>
               <FiExternalLink />
@@ -24,13 +32,16 @@ const ProductCard = () => {
         </div>
 
         <div className="flex flex-col gap-3">
-          <span className="text-[11pt]">This product is ...</span>
+          <span className="text-[11pt]">
+            A platform to help transform living places into a guesthouse and
+            earn income.
+          </span>
 
           <span
-            onClick={() => setActiveSection("Seed Funding")}
+            onClick={toggleActiveSection}
             className="underline cursor-pointer text-blue-600"
           >
-            Read More
+            {activeSection === "Seed Funding" ? "Close" : "Read More"}
           </span>
         </div>
 
