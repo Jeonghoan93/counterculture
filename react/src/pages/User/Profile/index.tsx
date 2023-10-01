@@ -7,7 +7,6 @@ const Profile: React.FC = () => {
     <Container>
       <div
         className="
-          mt-[-10pt]
           max-w-screen-xl 
           mx-auto
         "

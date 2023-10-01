@@ -64,7 +64,7 @@ const FullPageModal: React.FC = () => {
           </div>
 
           <h2 className="text-gray-300 font-bold text-[12pt] mb-2 font-mono">
-            We build softwares that can change the world
+            We build softwares that will change the world
           </h2>
         </div>
         <button
