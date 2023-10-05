@@ -23,7 +23,7 @@ const Party = () => {
                 <GiLovers />
               </span>
 
-              <span>We help people get together</span>
+              <span>Hosts any type of party events</span>
             </div>
           </LargeImgCard>
 

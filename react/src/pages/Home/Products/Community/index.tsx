@@ -24,7 +24,7 @@ const Community = () => {
                 <BsHouseHeart />
               </span>
 
-              <span>We help build community</span>
+              <span>Transform your home to earn income</span>
             </div>
           </LargeImgCard>
 
